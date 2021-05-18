@@ -34,4 +34,4 @@ http://localhost:3000/api/users/avatars - patch - обновить аватар
 - `npm run lint` &mdash; запустить выполнение проверки кода с eslint
 - `npm lint:fix` &mdash; та же проверка линтера, но с автоматическими исправлениями простых ошибок
 
-#### работа с Mongoose, Joi, passport, jsonwebtoken, multer, gravatar, jimp
+#### работа с Mongoose, Joi, passport, jsonwebtoken, multer, gravatar, jimp, есть тесты на contacts
