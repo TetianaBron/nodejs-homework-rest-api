@@ -27,6 +27,9 @@
 
 http://localhost:3000/api/users/avatars - patch - обновить аватар
 
+http://localhost:3000/api/users/verify/:verificationToken - get - верификация по токену (через email)
+http://localhost:3000/api/users/verify - post -повторная верификация по токену (через email)
+
 ### Команды:
 
 - `npm start` &mdash; старт сервера в режиме production
@@ -34,4 +37,4 @@ http://localhost:3000/api/users/avatars - patch - обновить аватар
 - `npm run lint` &mdash; запустить выполнение проверки кода с eslint
 - `npm lint:fix` &mdash; та же проверка линтера, но с автоматическими исправлениями простых ошибок
 
-#### работа с Mongoose, Joi, passport, jsonwebtoken, multer, gravatar, jimp, есть тесты на contacts
+#### работа с Mongoose, Joi, passport, jsonwebtoken, multer, gravatar, jimp, есть тесты на contacts, sendgrid (верификация пользователя по email), mailgen, nanoid(генератор токена)
