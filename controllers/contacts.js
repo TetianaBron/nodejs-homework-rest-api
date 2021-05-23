@@ -4,7 +4,7 @@ const { HttpCode } = require('../helpers/constants')
 const getAll = async (req, res, next) => {
   try {
     const userId = req.user?.id
-    const { contacts, total, limit, page, offset } = await Contacts.listContacts(userId, req.query)
+    const { contacts, total, limit, page } = await Contacts.listContacts(userId, req.query)
     return res.json({
       status: 'success',
       code: HttpCode.OK,
@@ -12,8 +12,7 @@ const getAll = async (req, res, next) => {
         contacts,
         total,
         limit,
-        page,
-        offset
+        page
       },
     })
   } catch (e) {

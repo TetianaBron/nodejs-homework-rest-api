@@ -22,7 +22,6 @@ const schemaQueryContact = Joi.object({
   filter: Joi.string().optional(),
   limit: Joi.number().integer().min(1).max(50).optional(),
   page: Joi.number().integer().min(1).max(50).optional(),
-  offset: Joi.number().integer().min(0).optional(),
   favorite: Joi.boolean().optional()
 }).without('sortBy', 'sortByDesc')
 

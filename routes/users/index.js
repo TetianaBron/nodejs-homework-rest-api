@@ -30,10 +30,9 @@ router.get('/starter', guard, role(subscription.STARTER), ctrl.onlyStarter)
 router.get('/pro', guard, role(subscription.PRO), ctrl.onlyPro)
 router.get('/business', guard, role(subscription.BUSINESS), ctrl.onlyBusiness)
 
-router.patch(
-  '/avatars',
-  guard,
-  uploadAvatar.single('avatar'),
-  ctrl.updateUserAvatar)
+router.patch('/avatars', guard, uploadAvatar.single('avatar'), ctrl.updateUserAvatar)
+
+router.get('/verify/:verificationToken', ctrl.verify)
+router.post('/verify', ctrl.repeatEmailVerify)
 
 module.exports = router
